@@ -9,7 +9,6 @@ namespace ShoppingCart.Interfaces
 {
     public interface IProductRepository
     {
-
         Product GetProduct(string name);
         IEnumerable<Product> GetProducts();
         void AddProduct(Product product);
