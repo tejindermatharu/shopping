@@ -7,9 +7,9 @@
 
             // route for the home page
             .when('/home', {
-                templateUrl: 'app/Cart/Html/admin.html',
-                controller: 'adminController',
-                controllerAs: 'vm'
+                template: '<admin-component></admin-component>'
+                //controller: 'adminController',
+                //controllerAs: 'vm'
             })
             .when('/shop', {
                 templateUrl: 'app/Cart/Html/shop.html',
@@ -17,9 +17,10 @@
                 controllerAs: 'vm'
             })
             .otherwise({
-                templateUrl: 'app/Cart/Html/admin.html',
-                controller: 'adminController',
-                controllerAs: 'vm'
+                //template: 'rferge'
+                template: '<admin-component></admin-component>'
+                //controller: 'adminController',
+                //controllerAs: 'vm'
             });
     });
 

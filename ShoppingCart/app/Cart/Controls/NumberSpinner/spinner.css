@@ -1,0 +1,38 @@
+﻿/* Put your css in here */
+
+/* we could have used bootstraps input-group here */
+
+.spinner {
+    width: 150px;
+    display: table;
+}
+
+.spinner input {
+    text-align: right;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+
+.input-group-btn-vertical > .btn {
+    display: block;
+    position: relative;
+    padding: 8px;
+    border-radius: 0;
+    margin-left: -1px;
+}
+
+    .input-group-btn-vertical > .btn:first-child {
+        border-top-right-radius: 4px;
+    }
+
+    .input-group-btn-vertical > .btn:last-child {
+        margin-top: -2px;
+        border-bottom-right-radius: 4px;
+    }
+
+.input-group-btn-vertical i {
+    position: absolute;
+    top: 0;
+    left: 4px;
+}

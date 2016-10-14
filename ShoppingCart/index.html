@@ -1,0 +1,55 @@
+﻿
+
+
+
+<html ng-app="app">
+<link href="Content/Site.css" rel="stylesheet" />
+<link href="Content/bootstrap.css" rel="stylesheet" />
+
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="/#admin"> Admin</a></li>
+                    <li><a href="/#shop"> Shop</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <section id="content">
+        <div class="container body-content">
+            <div>
+                hello
+                <div data-ng-view class="shuffle-animation"></div>
+
+            </div>
+        </div>
+    </section>
+
+</body>
+
+
+
+<script src="Scripts/jquery-1.10.2.js"></script>
+<script src="Scripts/angular.js"></script>
+<script src="Scripts/angular-route.js"></script>
+<script src="Scripts/angular-resource.js"></script>
+
+<script src="Scripts/bootstrap.js"></script>
+
+<script src="app/Cart/app.js"></script>
+<script src="app/Cart/route-config.js"></script>
+<script src="app/Cart/Controllers/shop-controller.js"></script>
+<script src="app/Cart/Components/admin-component.js"></script>
+<script src="app/Cart/Services/admin-repository.js"></script>
+
+</html>
