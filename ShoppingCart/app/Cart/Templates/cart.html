@@ -1,0 +1,23 @@
+﻿
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-8 well">
+            <h3>Cart</h3>
+            <div ng-repeat="item in vm.cartList">
+                <cart-item-component cart-item="item"
+                                     on-item-delete="vm.deleteItem($event)"
+                                     on-quantity-changed="vm.quantityChanged($event)">
+                </cart-item-component>
+            </div>
+            <sub-total-component total-number-items="vm.totalNumberItems" total-price="vm.totalPrice"></sub-total-component>
+        </div>
+        <div class="col-sm-4">
+            <div class="well" style="height: 200px">
+                <div style="text-align: center">
+                    <sub-total-component total-number-items="vm.totalNumberItems" total-price="vm.totalPrice"></sub-total-component>
+                    <button class="btn btn-primary" style="width:80%">Proceed to Checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -3,7 +3,7 @@
 
     angular.module('app')
         .component('numberSpinner', {
-            templateUrl: 'spinner.html',
+            templateUrl: 'app/Cart/Controls/NumberSpinner/spinner.html',
             controllerAs: "vm",
             bindings: {
                 initialValue: '=',

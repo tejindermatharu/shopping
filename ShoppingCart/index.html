@@ -5,9 +5,10 @@
 <html ng-app="app">
 <link href="Content/Site.css" rel="stylesheet" />
 <link href="Content/bootstrap.css" rel="stylesheet" />
+<link href="app/Cart/Controls/NumberSpinner/spinner.css" rel="stylesheet" />
 
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <!--<div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -23,12 +24,13 @@
                 </ul>
             </div>
         </div>
-    </div>
+    </div>-->
+
+    <nav-component></nav-component>
 
     <section id="content">
         <div class="container body-content">
             <div>
-                hello
                 <div data-ng-view class="shuffle-animation"></div>
 
             </div>
@@ -39,10 +41,16 @@
 
 
 
+
+
+</html>
+
 <script src="Scripts/jquery-1.10.2.js"></script>
 <script src="Scripts/angular.js"></script>
 <script src="Scripts/angular-route.js"></script>
 <script src="Scripts/angular-resource.js"></script>
+<script src="Scripts/rx.js"></script>
+<script src="Scripts/rx.angular.js"></script>
 
 <script src="Scripts/bootstrap.js"></script>
 
@@ -50,6 +58,13 @@
 <script src="app/Cart/route-config.js"></script>
 <script src="app/Cart/Controllers/shop-controller.js"></script>
 <script src="app/Cart/Components/admin-component.js"></script>
-<script src="app/Cart/Services/admin-repository.js"></script>
 
-</html>
+
+<script src="app/Cart/Services/admin-repository.js"></script>
+<script src="app/Cart/Services/generic-data-service.js"></script>
+<script src="app/Cart/Services/emmiter-service.js"></script>
+<script src="app/Cart/Components/admin-edit-component.js"></script>
+<script src="app/Cart/Components/admin-input-component.js"></script>
+<script src="app/Cart/Controls/NumberSpinner/spinner-component.js"></script>>
+<script src="app/Cart/Services/shop-service.js"></script>
+<script src="app/Cart/Components/nav-component.js"></script>

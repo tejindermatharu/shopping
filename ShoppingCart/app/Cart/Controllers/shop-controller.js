@@ -7,9 +7,9 @@
         .module('app')
         .controller('shopController', shopController);
 
-    shopController.$inject = ['$location', 'adminRepository'];
+    shopController.$inject = ['$location', 'adminRepository', 'shopService'];
 
-    function shopController($location, adminRepository) {
+    function shopController($location, adminRepository, shopService) {
 
         var vm = this;
 
@@ -44,11 +44,13 @@
             item.editMode = !item.editMode;
         };
 
-        vm.addToCart = function (item) {
+        vm.addToCart = function (item, $event) {
 
-            if (item.Quantity > 0) {
+            if ($event.value > 0) {
                 
                 vm.cartList.push(item);
+
+                shopService.addToCart($event.value);
 
                 refreshCart();
 

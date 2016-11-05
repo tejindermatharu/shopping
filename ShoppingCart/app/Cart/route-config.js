@@ -12,7 +12,7 @@
                 //controllerAs: 'vm'
             })
             .when('/shop', {
-                templateUrl: 'app/Cart/Html/shop.html',
+                templateUrl: 'app/Cart/Templates/shop.html',
                 controller: 'shopController',
                 controllerAs: 'vm'
             })

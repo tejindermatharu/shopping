@@ -208,10 +208,39 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app\Cart\Tests\admin-specs.js" />
-    <Content Include="app\Cart\Tests\JavaScript1.js" />
+    <Content Include="app\Cart\Components\admin-input-component.js" />
+    <Content Include="app\Cart\Components\cart-component.js" />
+    <Content Include="app\Cart\Components\sub-total-component.js" />
+    <Content Include="app\Cart\Services\shop-service.js" />
+    <Content Include="app\Cart\Templates\admin-edit.html" />
+    <Content Include="app\Cart\Templates\admin-input.html" />
+    <Content Include="app\Cart\Templates\cart-item.html" />
+    <Content Include="app\Cart\Templates\cart.html" />
+    <Content Include="app\Cart\Templates\nav-template.html" />
+    <Content Include="app\Cart\Templates\sub-total.html" />
+    <Content Include="app\Cart\Services\generic-data-service.js" />
     <Content Include="app\Cart\Tests\adminSpecs.js" />
+    <None Include="Scripts\angular.intellisense.js" />
+    <Content Include="Scripts\rx.angular.js" />
+    <Content Include="Scripts\rx.angular.min.js" />
+    <Content Include="Scripts\rx.async.compat.js" />
+    <Content Include="Scripts\rx.async.compat.min.js" />
+    <Content Include="Scripts\rx.async.js" />
+    <Content Include="Scripts\rx.async.min.js" />
+    <Content Include="Scripts\rx.binding.js" />
+    <Content Include="Scripts\rx.binding.min.js" />
+    <Content Include="Scripts\rx.compat.js" />
+    <Content Include="Scripts\rx.js" />
+    <Content Include="Scripts\rx.lite.compat.js" />
+    <Content Include="Scripts\rx.lite.compat.min.js" />
+    <Content Include="Scripts\rx.lite.js" />
+    <Content Include="Scripts\rx.lite.min.js" />
+    <Content Include="Scripts\x.compat.min.js" />
+    <Content Include="Scripts\x.min.js" />
     <Content Include="tsconfig.json" />
+    <Content Include="Scripts\rx.angular.min.js.map">
+      <DependentUpon>rx.angular.min.js</DependentUpon>
+    </Content>
     <TypeScriptCompile Include="app\Cart\app.ts" />
     <Content Include="app\Cart\Components\admin-component.js" />
     <Content Include="app\Cart\Controllers\shop-controller.js" />
@@ -219,8 +248,8 @@
     <Content Include="app\Cart\Controls\NumberSpinner\spinner-component.js" />
     <Content Include="app\Cart\Controls\NumberSpinner\spinner.css" />
     <Content Include="app\Cart\Controls\NumberSpinner\spinner.html" />
-    <Content Include="app\Cart\Html\admin.html" />
-    <Content Include="app\Cart\Html\shop.html" />
+    <Content Include="app\Cart\Templates\admin.html" />
+    <Content Include="app\Cart\Templates\shop.html" />
     <Content Include="app\Cart\route-config.js" />
     <Content Include="app\Cart\Services\admin-repository.js" />
     <Content Include="Content\bootstrap.css" />
@@ -1090,6 +1119,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="app\Cart\Components\admin-edit-component.ts" />
+    <TypeScriptCompile Include="app\Cart\Components\nav-component.ts" />
+    <TypeScriptCompile Include="app\Cart\Services\emmiter-service.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-animate.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-component-router.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-cookies.d.ts" />

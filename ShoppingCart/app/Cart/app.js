@@ -1,4 +1,4 @@
-var app = angular.module('app', ['ngRoute', 'ngResource']);
+var app = angular.module('app', ['ngRoute', 'ngResource', 'rx']);
 app.config(["$provide", function ($provide) {
         // Extend the $exceptionHandler service to also display a toast.
         $provide.decorator("$exceptionHandler", ["$delegate", extendExceptionHandler]);
