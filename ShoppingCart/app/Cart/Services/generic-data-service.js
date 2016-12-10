@@ -1,9 +1,9 @@
 ﻿(function () {
     'use strict';
 
-    angular.module('app').service('genericDataService', ['$injector', '$http', '$q', genericDataService]);
+    angular.module('app').service('genericDataService', ['$injector', '$http', '$q', '$timeout', genericDataService]);
 
-    function genericDataService($injector, $http, $q) {
+    function genericDataService($injector, $http, $q, $timeout) {
 
         function getRepositoryInstance(repoName) {
 
@@ -16,6 +16,15 @@
 
         function handleGenericError() {
             //Handle in a generic way
+        };
+
+        var fakeHttpService = function () {
+
+            var deffered = $q.defer();
+
+
+
+            return deffered.promise;
         };
 
         var getDataPromise = function (fullRepoName) {

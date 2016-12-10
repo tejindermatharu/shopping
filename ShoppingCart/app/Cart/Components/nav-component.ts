@@ -21,13 +21,16 @@ namespace Nav {
 
     class NavController {
 
+        public items: any;
         public itemsCount: number;
+        public state: any;
+        static $inject = ['emitterService', 'shopService', 'Store'];
 
-        static $inject = ['emitterService', 'shopService'];
+        constructor(private emitter: IEmitterService, private shopService: any, private store: any) {
 
-        constructor(private emitter: IEmitterService, private shopService: any) {
-
+            this.items = null;
             this.itemsCount = 0;
+            this.state = null;
             this.activate();
         }
 
@@ -38,18 +41,24 @@ namespace Nav {
 
         private activate() {
 
-            var promise = this.shopService.subcribeToAddToCart();
-
             var self = this;
+            self.items = this.store.subscribe('nav');
 
-            promise.then(null, null, function (count) {
+            this.shopService.onAdd(function (count) {
 
-                self.itemsCount += count;
-            });
+                self.items.itemsCount += count;
+            })
+
+            var promise = this.shopService.addedToCart()
+                                          .then(null,null,function (count) {
+
+                                             // self.itemsCount += count;
+
+                                               });
 
             this.emitter.listen('item-added', (event) => {
 
-                this.itemsCount += event.Quantity;
+                this.items.itemsCount += event.Quantity;
                 console.log('item added: ' + JSON.stringify(event));
             });
         }

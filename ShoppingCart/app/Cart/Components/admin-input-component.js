@@ -10,11 +10,21 @@
                 productAdded: '<',
                 addProd: '&'
             },
-            controller: controller
+            controller: controller,
+            transclude: true
         });
 
-    function controller() {
+    function controller($transclude, $element) {
         var vm = this;
+
+        vm.test = 12;
+
+        $transclude(function (transEl, transScope) {
+            // Set something property
+            transScope.test = vm.test;
+            // Now append transcluded element to your element
+            $element.find('#additionalContent').append(transEl);
+        });
 
         vm.add = function addProduct() {
 

@@ -8,30 +8,38 @@
         .module('app')
         .service('shopService', shopService);
 
-    shopService.$inject = ['$q'];
+    shopService.$inject = ['deferredService', '$q'];
 
-    function shopService($q) {
+    function shopService(deferredService, $q) {
         
-        var deferred = $q.defer();
+        var deferred = deferredService.deferred();
 
             var service = {
-            addToCart: addToCart,
-            subcribeToAddToCart: subcribeToAddToCart
+                addedToCart: addedToCart,
+                onAdd: onAdd,
+                fireOnAdd: fireOnAdd
         };
 
         return service;
-
-
-        function subcribeToAddToCart() {
-            return deferred.promise;
-        };        
-
-        function addToCart(addQuantity) {
+     
+        function addedToCart(addQuantity) {
 
             if (addQuantity) {
                 deferred.notify(addQuantity);
             }
+
+            return deferred.promise;
         }
 
+        var callback = function () {};
+
+        function onAdd(fn) {
+            callback = fn;
+        }
+
+        function fireOnAdd(data)
+        {
+            callback(data);
+        }
     };
 })();
