@@ -1,21 +1,8 @@
-﻿
-namespace AdminEdit {
-
-    interface IAdminEditComponentBindings {
-        productList: Array<any>;
-        deleteProd: (event: any) => any;
-        editProd: (event: any) => any;
-    }
+var AdminEdit;
+(function (AdminEdit) {
     //import EditController = require("./admin-edit-controller");
-
-    class AdminEditComponent implements ng.IComponentOptions {
-
-        public controller: any;
-
-        public templateUrl: string;
-        public bindings: any;
-
-        constructor() {
+    var AdminEditComponent = (function () {
+        function AdminEditComponent() {
             this.controller = AdminEditController;
             this.bindings = {
                 productList: '<',
@@ -24,46 +11,44 @@ namespace AdminEdit {
             };
             this.templateUrl = 'app/Cart/Templates/admin-edit.html';
         }
-    };
-
-    class AdminEditController implements IAdminEditComponentBindings {
-
-        public productList: Array<any>;
-        public deleteProd: (event: any) => any;
-        public editProd: (event: any) => any;
-
-        public deleteProduct(product) {
-
+        return AdminEditComponent;
+    }());
+    ;
+    var AdminEditController = (function () {
+        function AdminEditController() {
+        }
+        AdminEditController.prototype.deleteProduct = function (product) {
             this.deleteProd({
                 $event: {
                     product: product
                 }
             });
         };
-        
-
-        public update(product) {
-
+        ;
+        AdminEditController.prototype.update = function (product) {
             this.editProd({
                 $event: {
                     product: product
                 }
             });
         };
-
-        public updateOnEnter(product, event) {
-
+        ;
+        AdminEditController.prototype.updateOnEnter = function (product, event) {
             if (event.key === "Enter") {
                 this.update(product);
-            };
+            }
+            ;
         };
-
-        public toggleEditMode(item) {
+        ;
+        AdminEditController.prototype.toggleEditMode = function (item) {
             // Toggle
             item.editMode = !item.editMode;
         };
-    };
-
+        ;
+        return AdminEditController;
+    }());
+    ;
     angular.module('app').component('adminEditComponent', new AdminEditComponent());
-
-}; 
+})(AdminEdit || (AdminEdit = {}));
+;
+//# sourceMappingURL=admin-edit-component.js.map

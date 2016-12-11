@@ -10,7 +10,7 @@
             controller: controller
         });
 
-    function controller($scope, $location, adminRepository, genericDataService, rx) {
+    function controller($scope, $location, $window, adminRepository, genericDataService, rx) {
 
         console.log('test');
         var vm = this;
@@ -86,6 +86,10 @@
 
         getAllProductsUsingPromises();
         //getAllProductsUsingRxJs();
+
+        vm.undock = function () {
+            $window.open('#/adminedit', '_blank', 'toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=600,height=400');
+        };
 
         // Updates an item
         vm.update = function (event) {

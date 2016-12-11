@@ -208,17 +208,23 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\Cart\Components\admin-edit-component.js" />
     <Content Include="app\Cart\Components\admin-input-component.js" />
     <Content Include="app\Cart\Components\cart-component.js" />
+    <Content Include="app\Cart\Components\main-component.js" />
+    <Content Include="app\Cart\Components\nav-component.js" />
     <Content Include="app\Cart\Components\sub-total-component.js" />
     <Content Include="app\Cart\Directives\addClearButton.js" />
     <Content Include="app\Cart\Services\deferredService.js" />
+    <Content Include="app\Cart\Services\emmiter-service.js" />
     <Content Include="app\Cart\Services\shop-service.js" />
     <Content Include="app\Cart\Services\store-service.js" />
+    <Content Include="app\Cart\Services\system-service.js" />
     <Content Include="app\Cart\Templates\admin-edit.html" />
     <Content Include="app\Cart\Templates\admin-input.html" />
     <Content Include="app\Cart\Templates\cart-item.html" />
     <Content Include="app\Cart\Templates\cart.html" />
+    <Content Include="app\Cart\Templates\main.html" />
     <Content Include="app\Cart\Templates\nav-template.html" />
     <Content Include="app\Cart\Templates\sub-total.html" />
     <Content Include="app\Cart\Services\generic-data-service.js" />
@@ -233,6 +239,9 @@
     <Content Include="fonts\FontAwesome.otf" />
     <Content Include="gulpfile.js" />
     <Content Include="package.json" />
+    <Content Include="app\Cart\Components\nav-component.js.map" />
+    <Content Include="app\Cart\Components\admin-edit-component.js.map" />
+    <Content Include="app\Cart\Services\emmiter-service.js.map" />
     <None Include="Scripts\angular.intellisense.js" />
     <Content Include="Scripts\rx.angular.js" />
     <Content Include="Scripts\rx.angular.min.js" />

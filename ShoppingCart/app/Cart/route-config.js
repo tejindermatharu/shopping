@@ -11,6 +11,14 @@
                 //controller: 'adminController',
                 //controllerAs: 'vm'
             })
+            .when('/adminedit', {
+                template: '<admin-edit-component></<admin-edit-component>',
+                resolve: {
+                    load: function (SystemService) {
+                        SystemService.fireNavEvent({ showNav: false });
+                    }
+                }
+            })
             .when('/shop', {
                 templateUrl: 'app/Cart/Templates/shop.html',
                 controller: 'shopController',
