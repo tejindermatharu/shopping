@@ -231,6 +231,8 @@
     <Content Include="fonts\fontawesome-webfont.ttf" />
     <Content Include="fonts\fontawesome-webfont.eot" />
     <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="gulpfile.js" />
+    <Content Include="package.json" />
     <None Include="Scripts\angular.intellisense.js" />
     <Content Include="Scripts\rx.angular.js" />
     <Content Include="Scripts\rx.angular.min.js" />

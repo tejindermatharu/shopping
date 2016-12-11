@@ -44,3 +44,4 @@
 /// <reference path="../app/cart/services/deferredservice.js" />
 /// <reference path="../app/cart/directives/addclearbutton.js" />
 /// <reference path="../app/cart/services/store-service.js" />
+/// <reference path="../gulpfile.js" />

@@ -23,8 +23,8 @@ function Store ()  {
         return state[type];
     };
 
-    function dispatch(type, payload) {
-        angular.extend(state[type], payload);
+    function dispatch(action) {
+        angular.extend(state[action.type], action.payload);
     };
 
     // expose basic getter and setter methods

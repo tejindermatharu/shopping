@@ -49,7 +49,7 @@
             if ($event.value > 0) {
                 
                 vm.cartList.push(item);
-                Store.dispatch('nav', { viewType: 'test', itemsCount: $event.value });
+                Store.dispatch({ type: 'nav', payload: { viewType: 'test', itemsCount: $event.value } });
 
                 shopService.addedToCart($event.value);
 
