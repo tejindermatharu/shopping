@@ -1,15 +1,14 @@
 ﻿
-
-import IEmitterService = Emitter.IEmitterService;
 import { Component, Input, Output, EventEmitter, Inject, OnInit} from '@angular/core';
 import { IProduct }  from '../Models/product';
+import { EmitterService } from '../Services/emmiter-service';
 
 @Component({
     selector: 'admin-edit',
-    templateUrl: 'app/Cart/Templates/admin-edit2.html'
-    //providers: [
-    //    { provide: Window, useValue: window }
-    //]
+    templateUrl: 'app/Cart/Templates/admin-edit2.html',
+    providers: [
+        { provide: Window, useValue: window }
+    ]
 })
 export class AdminEditController2 implements OnInit {
 
@@ -19,16 +18,12 @@ export class AdminEditController2 implements OnInit {
     @Output() delete = new EventEmitter<IProduct>();
     @Output() editProd = new EventEmitter<IProduct>();
 
-    //static $inject = ['emitterService', 'genericDataService', '$window', '$timeout'];
-
-
-    //constructor(private emitter: IEmitterService, private genericDataService: any, @Inject(Window) private _window: Window) {
-    constructor() {
-
+    constructor(private emitter: EmitterService, @Inject(Window) private _window: Window) {
+        
     }
 
     ngOnInit(): void {
-
+ 
         if (this.dockable) {
             // this.getAllProducts();
 

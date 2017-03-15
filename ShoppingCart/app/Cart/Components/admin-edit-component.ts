@@ -7,8 +7,6 @@ namespace AdminEdit {
         editProd: (event: any) => any;
     }
 
-    import IEmitterService = Emitter.IEmitterService;
-
     class AdminEditComponent implements ng.IComponentOptions {
 
         public controller: any;
@@ -37,7 +35,7 @@ namespace AdminEdit {
 
         static $inject = ['emitterService', 'genericDataService', '$window', '$timeout'];
 
-        constructor(private emitter: IEmitterService, private genericDataService: any, private $window : ng.IWindowService, private $timeout: ng.ITimeoutService) {
+        constructor(private emitter: any, private genericDataService: any, private $window : ng.IWindowService, private $timeout: ng.ITimeoutService) {
 
             if (this.dockable) {
                 this.getAllProducts();

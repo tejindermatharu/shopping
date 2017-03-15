@@ -6,7 +6,7 @@ namespace Nav {
 
     'use strict';
 
-    import IEmitterService = Emitter.IEmitterService;
+   // import IEmitterService = Emitter.IEmitterService;
 
     class NavComponent implements ng.IComponentOptions {
 
@@ -26,7 +26,7 @@ namespace Nav {
         public state: any;
         static $inject = ['emitterService', 'shopService', 'Store'];
 
-        constructor(private emitter: IEmitterService, private shopService: any, private store: any) {
+        constructor(private emitter: any, private shopService: any, private store: any) {
 
             this.items = null;
             this.itemsCount = 0;

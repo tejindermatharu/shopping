@@ -477,7 +477,7 @@
     <Content Include="Scripts\lib\kendo-ui\styles\kendo.uniform.mobile.min.css" />
     <Content Include="systemjs.config.js" />
     <Content Include="users.html" />
-    <Content Include="app\Cart\app.js" />
+    <Content Include="app\app.js" />
     <Content Include="app\Cart\Components\admin-input-component.js" />
     <Content Include="app\Cart\Components\cart-component.js" />
     <Content Include="app\Cart\Components\main-component.js" />
@@ -543,7 +543,7 @@
     <Content Include="app\Cart\Controls\NumberSpinner\spinner.css" />
     <Content Include="app\Cart\Controls\NumberSpinner\spinner.html" />
     <Content Include="app\Cart\Templates\shop.html" />
-    <Content Include="app\Cart\route-config.js" />
+    <Content Include="app\route-config.js" />
     <Content Include="app\Cart\Services\admin-repository.js" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />

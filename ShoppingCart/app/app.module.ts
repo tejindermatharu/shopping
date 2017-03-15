@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 
 import { HeroDetailComponent } from './Cart/Components/test';
 import { AdminEditController2 } from './Cart/Components/admin-edit-component2';
+import { EmitterService } from './Cart/Services/emmiter-service';
 
 import './Migrate/downgrades';
 
@@ -17,6 +18,9 @@ import './Migrate/downgrades';
     declarations: [
         HeroDetailComponent,
         AdminEditController2
+    ],
+    providers: [
+        EmitterService
     ],
     entryComponents: [
         HeroDetailComponent,
