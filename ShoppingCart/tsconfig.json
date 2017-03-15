@@ -1,0 +1,21 @@
+﻿{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "types": ["angular"],
+    "inlineSourceMap": true,
+    "inlineSources": true,
+    "noImplicitAny": false,
+    "preserveConstEnums": true,
+    "removeComments": false,
+    "sourceMap": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true
+  },
+  "include": [
+    "app/**/*",
+    "main.*"
+   ]
+}

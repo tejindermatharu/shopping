@@ -1,0 +1,36 @@
+﻿
+
+<table class="table table-condensed table-hover table-striped">
+    <tr class="panel-title">
+        <th style="text-align:center;">Add to basket</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Price</th>
+    </tr>
+    <tr ng-repeat="item in vm.productList">
+
+        <td style="width: 100px;">
+
+            <number-spinner initial-value="1"
+                            config="{ minValue: 1}"
+                            on-change="vm.addToCart(item, $event);"></number-spinner>
+        </td>
+
+        <td>
+            <span>
+                {{item.Name}}
+            </span>
+        </td>
+        <td>
+            <span>
+                {{item.Desc}}
+            </span>
+        </td>
+        <td>
+            <span>
+                {{item.Price}}
+            </span>
+        </td>
+
+    </tr>
+</table>

@@ -1,0 +1,80 @@
+﻿
+<!--<div>
+    <div class="well">
+
+        <div class="lm_item lm_row" style="width: 100%;">
+
+                <div style="width: 400px;height: 350px; display:inline-block ">
+                    <dockable-panel-component url="admininput" title="Input">
+                        <admin-input-component product-added="vm.productAdded"
+                                               test="vm.toggle"
+                                               add-prod="vm.add($event);"></admin-input-component>
+                    </dockable-panel-component>
+                </div>
+
+
+                <div style="width: 600px; height: 350px; display:inline-block ">
+                    <dockable-panel-component url="basket" title="Basket">
+                        <basket-component>
+                        </basket-component>
+                    </dockable-panel-component>
+
+                </div>
+        </div>
+    </div>
+
+    <div class="lm_item lm_row" style="width: 100%;">
+
+            <div style="display:block ">
+                <dockable-panel-component url="adminedit" title="Grid">
+                    <admin-edit-component product-list="vm.productList"
+                                          delete-prod="vm.delete($event);"
+                                          edit-prod="vm.update($event);"></admin-edit-component>
+                </dockable-panel-component>
+
+            </div>
+
+        </div>
+    </div>-->
+
+
+
+<div class="grid" id="adminGrid">
+
+    <div class="grid-item" data-item-id="1" style="width: 500px;height:340px">
+        <dockable-panel-component url="admininput" title="Input" pre-process="vm.preProcessInput">
+            <admin-input-component product-added="vm.productAdded"
+                                   test="vm.toggle"
+                                   add-prod="vm.add($event);"></admin-input-component>
+        </dockable-panel-component>
+    </div>
+
+    <div class="grid-item" data-item-id="2" style="width: 550px;height:340px">
+        <dockable-panel-component url="basket" title="Basket">
+            <basket-component></basket-component>
+        </dockable-panel-component>
+    </div>
+
+    <div class="grid-item" data-item-id="3" style="width: 100%; height: 300px;overflow: auto">
+        <dockable-panel-component url="adminedit" title="Grid" options="vm.adminEditPanelOptions">
+            <!--<admin-edit-component product-list="vm.productList"
+                                      delete-prod="vm.delete($event);"
+                                      edit-prod="vm.update($event);"></admin-edit-component>-->
+            <admin-edit [product]="vm.productList"
+                        [dockable]="false"
+                        (delete)="vm.delete($event)"
+                        (editProd)="vm.update($event)">
+            </admin-edit>
+        </dockable-panel-component>
+    </div>
+
+</div>
+
+<div class="form-group">
+    <button type="submit" class="btn btn-default" ng-click="vm.deletetest()">Delete</button>
+</div>
+
+{{vm.status}}
+
+<hero-detail></hero-detail>
+

@@ -1,0 +1,23 @@
+﻿
+<div class="well">
+    <table class="table table-condensed table-striped table-hover custom-table-style">
+        <tr class="panel-title">
+            <th></th>
+            <th>Price</th>
+            <th>Quantity</th>
+        </tr>
+        <tr class="indent">
+            <td style="text-align: left" width="40%">{{vm.cartItem.Desc}}</td>
+            <td class="price" width="30%">{{vm.cartItem.Price | currency: "£": 2}}</td>
+            <td style="padding-top: 5px;" width="30%">
+
+                <span class="center-content" style="width: 100px">
+                    <number-spinner initial-value="vm.cartItem.Quantity"
+                                    config="{ minValue: 1}"
+                                    on-change="vm.quantityChanged(vm.cartItem, $event);"></number-spinner>
+                </span>
+            </td>
+        </tr>
+    </table>
+    <a style="padding-left: 5px" href="" ng-click="vm.delete();">Delete</a>
+</div>

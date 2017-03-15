@@ -1,0 +1,27 @@
+﻿
+
+<style>
+    #pivotgrid {
+        width: 100%;
+    }
+
+    .hidden-on-narrow {
+        display: inline-block;
+        vertical-align: top;
+    }
+</style>
+
+<!--<div class="section">
+    <span>Username</span> {{vm.name}}
+</div>-->
+
+<button id="export" ng-click="vm.export()" class="k-button k-button-icontext hidden-on-narrow"><span class="k-icon k-i-excel"></span>Export to Excel</button>
+
+
+<button id="config" ng-click="vm.show()" class="k-button k-button-icontext hidden-on-narrow"><span class="k-icon k-i-excel"></span>Configuration</button>
+
+<div kendo-pivot-configurator k-height="350" k-data-source="vm.dataSource" id="configurator" class="hidden-on-narrow" ng-show="vm.showConfig"></div>
+<!--<div kendo-pivot-grid k-options="vm.options" id="pivotgrid" class="hidden-on-narrow"></div>-->
+
+<br />
+<div id="pivotgrid" class="hidden-on-narrow" style="margin-top:10px"></div>

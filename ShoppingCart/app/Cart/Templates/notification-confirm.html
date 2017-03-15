@@ -1,0 +1,21 @@
+﻿<div class="not-successful">
+    <h1>{{vm.title}}</h1>
+
+    <div class="text-center">
+        <p>{{vm.message}}</p>
+    </div>
+    <div class="row text-center">
+        <button type="button" class="btn btn-primary col-md-2 col-md-offset-3"
+                data-ng-click="vm.save()">
+            Yes
+        </button>
+        <button type="button" class="btn btn-primary col-md-2 col-md-offset-3"
+                data-ng-click="vm.cancel()">
+            No
+        </button>
+        <button type="button" class="btn btn-primary col-md-2 col-md-offset-3"
+                data-ng-click="vm.close()">
+            cancel
+        </button>
+    </div>
+</div>

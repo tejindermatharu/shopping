@@ -1,0 +1,26 @@
+﻿
+
+<form name="adminForm" novalidate style="margin-left: 10px">
+    <div class="form-group">
+        <label for="txtName">Name</label>
+        <input type="text" class="form-control input-sm thinTextBox" id="txtName" required ng-model="vm.product.name">
+    </div>
+    <div class="form-group">
+        <label for="txtDescription">Description</label>
+        <input type="text" class="form-control input-sm thinTextBox" id="txtDescription" required ng-model="vm.product.desc">
+    </div>
+    <div class="form-group">
+        <label for="txtPrice">Price</label>
+        <input type="text" name="price" class="form-control input-sm thinTextBox" id="txtPrice" required ng-minlength="1" ng-model="vm.product.price" />
+        <div ng-messages="adminForm.price.$error" style="color: maroon" role="alert">
+            <div ng-message="myForm.myName.$error.required">You did not enter a field</div>
+            <div ng-message="minlength">Your field is too short</div>
+        </div>
+    </div>
+    <br>
+    <div class="form-group">
+        <button type="submit" ng-disabled="adminForm.$invalid" class="btn btn-default" ng-click="vm.add()">Add</button>
+    </div>
+    <div id="additionalContent">      
+    </div>
+</form>

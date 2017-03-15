@@ -1,0 +1,55 @@
+﻿
+
+
+<table class="table table-condensed table-striped table-hover table-bordered custom-table-style">
+    <tr class="panel-title">
+        <th></th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Price</th>
+    </tr>
+    <tr ng-repeat="item in $ctrl.productList" ng-dblclick="$ctrl.toggleEditMode(item)">
+        <td>
+            <!--Edit + Delete-->
+            <div class="btn-toolbar" ng-show="item.editMode == null || item.editMode == false">
+                <div class="btn-group">
+                    <i class="btn glyphicon glyphicon-edit" ng-click="$ctrl.toggleEditMode(item)" title="Edit"></i>
+                    <i class="btn glyphicon glyphicon-trash" ng-click="$ctrl.deleteProduct(item)" title="Delete" data-toggle="modal"></i>
+                </div>
+            </div>
+            <!--Save + Cancel-->
+            <div class="btn-toolbar" ng-show="item.editMode">
+                <div class="btn-group">
+                    <i class="btn glyphicon glyphicon-floppy-disk" ng-click="$ctrl.update(item)" title="Save" ng-disabled="editForm.$invalid"></i>
+                    <i class="btn glyphicon glyphicon-remove" ng-click="$ctrl.toggleEditMode(item)" title="Cancel"></i>
+                </div>
+            </div>
+        </td>
+        <td style="vertical-align: middle">
+            <!--Name read mode-->
+            <span class="full-width-inline">{{item.name}}</span>
+        </td>
+        <!-- Content columns-->
+        <td style="vertical-align: middle">
+            <!--Name read mode-->
+            <span class="full-width-inline" ng-show="item.editMode == null || item.editMode == false">
+                {{item.desc}}
+            </span>
+            <!--Name edit mode-->
+            <form name="editForm">
+                <input ng-model="item.desc" ng-show="item.editMode" required ng-keydown="vm.updateOnEnter(item, $event)" class="form-control" />
+            </form>
+        </td>
+        <td style="vertical-align: middle">
+            <!--Name read mode-->
+            <span class="full-width-inline" ng-show="item.editMode == null || item.editMode == false">
+                {{item.price}}
+            </span>
+            <!--Name edit mode-->
+            <form name="editForm">
+                <input ng-model="item.price" ng-show="item.editMode" required ng-keydown="vm.updateOnEnter(item, $event)" class="form-control" />
+            </form>
+        </td>
+    </tr>
+</table>
+

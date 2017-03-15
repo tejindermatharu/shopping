@@ -1,0 +1,26 @@
+﻿
+
+<div class="lm_item lm_stack" ng-hide="vm.isUndocked">
+
+    <div class="lm_header" style="height: 20px; overflow: visible;">
+        <ul class="lm_tabs">
+            <li class="lm_tab lm_active" title={{vm.title}} style="z-index: 1;">
+                <i class="lm_left"></i><span class="lm_title">{{vm.title}}</span>
+                <div class="lm_close_tab" style="display: block;"></div>
+                <i class="lm_right"></i>
+            </li>
+        </ul>
+        <ul class="lm_controls">
+            <li class="lm_popout" ng-click="vm.preProcessBeforeUnDocking();vm.undock()" title="open in new window"></li>
+            <li class="lm_maximise" title="maximise"></li>
+            <li class="lm_close" title="close"></li>
+        </ul>
+    </div>
+    <div class="lm_items" style="">
+        <div class="lm_item_container" style="display: block;">
+            <div class="lm_content" style="" ng-transclude>
+
+            </div>
+        </div>
+    </div>
+</div>
